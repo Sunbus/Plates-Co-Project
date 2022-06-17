@@ -9,7 +9,7 @@ export class BasketController implements IBasketController{
   addItem = (product: ProductTypesEnum) => {
     R.get(BasketService).addNewItemToBasket(product)
 
-     toast.success(`${product} added to your basket`)
+    toast.success(`${product} added to your basket`)
   }
 
   buyItemsInBasket = () => {

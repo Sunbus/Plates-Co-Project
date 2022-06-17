@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css'
 import { App } from '@view/index'
 import './styles.module.less'
 
-
 const main = async () => {
   const rootElement: HTMLElement | null = document.getElementById('root')
 
@@ -26,17 +25,17 @@ const main = async () => {
   setAppElement('#root')
 
   root.render(
-   <BrowserRouter>
-    <App />
-    <ToastContainer
-      position="top-center"
-      theme="dark"
-      autoClose={ 5000 }
-      hideProgressBar
-      closeOnClick
-      pauseOnHover
-    />
-   </BrowserRouter>
+    <BrowserRouter>
+      <App />
+      <ToastContainer
+        position="top-center"
+        theme="dark"
+        autoClose={5000}
+        hideProgressBar
+        closeOnClick
+        pauseOnHover
+      />
+    </BrowserRouter>,
   )
 }
 
