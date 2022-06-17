@@ -1,0 +1,72 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+
+
+  img {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 244, 240, 0.5);
+    z-index: 100;
+
+    button {
+      position: absolute;
+      outline: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 101;
+      background-color: black;
+      border-radius: 20px;
+      border: 2px solid black;
+      height: 50px;
+      width: 150px;
+      color: white;
+
+      &:hover {
+        cursor: pointer;
+        border: 2px solid white;
+      }
+    }
+  }
+
+  &:hover .overlay {
+    display: block;
+  }
+
+  .separator {
+    box-sizing: border-box;
+    border-bottom: 3px solid black;
+    height: 3px;
+    width: 100%;
+  }
+
+  .infoBlock {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(247, 244, 240);
+    color: black;
+    z-index: 102;
+  }
+}

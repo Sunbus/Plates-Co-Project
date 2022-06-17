@@ -1,0 +1,97 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 0;
+  width: 100%;
+
+  .row {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 20px 0 0 0;
+    padding: 10px 0;
+    border-bottom: none;
+
+    & > div {
+      box-sizing: border-box;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 15px;
+      width: 35%;
+      text-align: left;
+    }
+
+    & > button {
+      margin: 0 1%;
+      width: 14%;
+    }
+
+    .title {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .clearButton {
+      box-sizing: border-box;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      height: 50px;
+      //width: 20%;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      &:disabled {
+        background-color: transparent;
+        color: rgb(150, 150, 150);
+
+        &:hover {
+          cursor: auto;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .countButton {
+      box-sizing: border-box;
+      background-color: transparent;
+      outline: none;
+      border: 2px solid black;
+      border-radius: 10px;
+      height: 50px;
+      //width: 20%;
+
+      &:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+      }
+
+      &:disabled {
+        border: 2px solid rgb(150, 150, 150);
+        background-color: transparent;
+        color: rgb(150, 150, 150);
+
+        &:hover {
+          cursor: auto;
+        }
+      }
+    }
+  }
+
+  .rowTitle {
+    border-bottom: 2px solid black;
+    padding: 15px 0;
+  }
+}

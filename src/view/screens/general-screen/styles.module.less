@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px auto;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .marketingBlock {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+  }
+
+  .shopBlock {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    justify-items: stretch;
+    align-items: center;
+    width: 90%;
+    padding: 0;
+    margin: 0;
+
+    .shopMessage {
+      width: 100%;
+      height: 100%;
+    }
+
+    .platesList {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 272px 272px 272px;
+      justify-content: stretch;
+      align-items: stretch;
+    }
+  }
+}
