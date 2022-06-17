@@ -2,7 +2,7 @@
   "name": "planes-co",
   "title": "Plates Co Project",
   "description": "Plates Co for Lean Scale",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "author": "Aliaksar Katovich",
   "license": "MIT",
@@ -11,7 +11,8 @@
   "homepage": "https://github.com/Sunbus/test#readme",
   "scripts": {
     "start": "rimraf ./.parcel-cache && parcel src/index.html --port 8080",
-    "build": "rimraf ./.parcel-cache ./dist && parcel build src/index.html --public-url ./ --no-source-maps && node .version.js"
+    "build": "rimraf ./.parcel-cache ./dist && parcel build src/index.html --public-url ./ --no-source-maps && node .version.js",
+    "prepare": "husky install"
   },
   "dependencies": {
     "classnames": "^2.3.1",
@@ -42,6 +43,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
     "less": "^4.1.2",
     "parcel": "^2.5.0",
     "postcss": "^8.4.13",

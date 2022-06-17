@@ -19,16 +19,16 @@ export const BasketComponent: FC<IBasketComponentProps> = ({
 }) => (
   <div className={ styles.container }>
     <div className={ cn(styles.row, styles.rowTitle) }>
-      <div className={ cn(styles.products, styles.title) }>Current Basket</div>
-      <div className={ cn(styles.total, styles.title) }>Total</div>
+      <div className={ styles.title }>Current Basket</div>
+      <div className={ styles.title }>Total</div>
     </div>
-    <div className={ cn(styles.row, styles.currentBasketRow) }>
-      <div className={ styles.products }>
+    <div className={ styles.row }>
+      <div>
         {
           basketData.products.map(productData => productData.product).join(', ')
         }
       </div>
-      <div className={ styles.total }>${ basketData.totalCost }</div>
+      <div>${ basketData.totalCost }</div>
       <button
         className={ styles.clearButton }
         onClick={ clearItemsHandler }
